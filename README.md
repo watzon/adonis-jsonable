@@ -67,7 +67,7 @@ this.addTrait('@provider:Jsonable', [ 'pets' ])
 
 ## Changelog
 
-## v0.1.1
+### v0.1.1
 - Removed `console.log`
 
 ### v0.1.0
