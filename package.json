@@ -20,6 +20,9 @@
   ],
   "author": "Chris Watzon <chris@watzon.me>",
   "license": "MIT",
+  "peerDependencies": {
+    "@adonisjs/fold": "^4.0.5"
+  },
   "bugs": {
     "url": "https://github.com/watzon/adonis-jsonable/issues"
   },
