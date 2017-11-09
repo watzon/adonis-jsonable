@@ -1,0 +1,27 @@
+{
+  "name": "adonis-jsonable",
+  "version": "0.1.0",
+  "description": "Help Adonis handle Postgres JSON types better",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/watzon/adonis-jsonable.git"
+  },
+  "keywords": [
+    "json",
+    "adonis",
+    "adonisjs",
+    "postgres",
+    "postgresql",
+    "pgsql"
+  ],
+  "author": "Chris Watzon <chris@watzon.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/watzon/adonis-jsonable/issues"
+  },
+  "homepage": "https://github.com/watzon/adonis-jsonable#readme"
+}
