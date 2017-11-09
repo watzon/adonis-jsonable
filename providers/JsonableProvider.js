@@ -4,7 +4,8 @@ const { ServiceProvider } = require('@adonisjs/fold')
 
 class JsonableProvider extends ServiceProvider {
   register () {
-    this.app.bind('Adonis/Traits/Jsonable', () => require('../src/Traits/Jsonable'))
+    const Jsonable = require('../src/Traits/Jsonable')
+    this.app.bind('Adonis/Traits/Jsonable', () => new Jsonable)
     this.app.alias('Adonis/Traits/Jsonable', 'Jsonable')
   }
 
