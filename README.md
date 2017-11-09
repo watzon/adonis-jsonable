@@ -19,6 +19,8 @@ The `Jsonable` trait solves this issue by allowing you to specify a list of `jso
 First install this package
 
 ```bash
+adonis install adonis-jsonable
+# or
 npm install --save adonis-jsonable
 # or
 yarn add adonis-jsonable
