@@ -6,7 +6,6 @@ class Jsonable {
 
     register (Model, options) {
         this.fields = (options.length > 0 ? options : null) || Model.prototype.jsonFields || []
-        console.log(options)
 
         Model.addHook('beforeSave', this._beforeSave.bind(this))
         Model.addHook('afterSave', this._afterSave.bind(this))
