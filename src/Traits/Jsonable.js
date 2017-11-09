@@ -5,16 +5,14 @@ class Jsonable {
     }
 
     register (Model, options) {
-        this.fields = Model.prototype.jsonFields || options || []
+        this.fields = (options.length > 0 ? options : null) || Model.prototype.jsonFields || []
         console.log(options)
 
-        Model.addHook('beforeSave', this.beforeUpdateSave.bind(this))
-        Model.addHook('beforeUpdate', this.beforeUpdateSave.bind(this))
-        Model.addHook('afterSave', this.afterUpdateSave.bind(this))
-        Model.addHook('afterUpdate', this.afterUpdateSave.bind(this))
+        Model.addHook('beforeSave', this._beforeSave.bind(this))
+        Model.addHook('afterSave', this._afterSave.bind(this))
     }
 
-    beforeUpdateSave (instance) {
+    _beforeSave (instance) {
         for (let field of this.fields) {
             if (instance[field]) {
                 instance[field] = JSON.stringify(instance[field])
@@ -22,7 +20,7 @@ class Jsonable {
         }
     }
 
-    afterUpdateSave (instance) {
+    _afterSave (instance) {
         for (let field of this.fields) {
             if (instance[field]) {
                 instance[field] = JSON.parse(instance[field])
