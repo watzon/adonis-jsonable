@@ -24,7 +24,7 @@ class Jsonable {
     _afterSave (instance) {
         for (let field of this.fields) {
             if (instance[field]) {
-                instance[field] = JSON.parse(instance[field])
+                instance[field] = typeof instance[field] === 'string' ? JSON.parse(instance[field]) : instance[field]
             }
         }
     }
@@ -32,7 +32,7 @@ class Jsonable {
     _afterFind (instance) {
         for (let field of this.fields) {
             if (instance[field]) {
-              instance[field] = JSON.parse(instance[field])
+              instance[field] = typeof instance[field] === 'string' ? JSON.parse(instance[field]) : instance[field]
             }
         }
     }
@@ -41,7 +41,7 @@ class Jsonable {
         for (let instance of instances) {
             for (let field of this.fields) {
                 if (instance[field]) {
-                  instance[field] = JSON.parse(instance[field])
+                  instance[field] = typeof instance[field] === 'string' ? JSON.parse(instance[field]) : instance[field]
                 }
             }
         }
