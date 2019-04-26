@@ -11,6 +11,7 @@ class Jsonable {
         Model.addHook('afterSave', this._afterSave.bind(this))
         Model.addHook('afterFind', this._afterFind.bind(this))
         Model.addHook('afterFetch', this._afterFetch.bind(this))
+        Model.addHook('afterPaginate', this._afterFetch.bind(this))
     }
 
     _beforeSave (instance) {
