@@ -1,6 +1,6 @@
 {
   "name": "adonis-jsonable",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Help Adonis handle Postgres JSON types better",
   "main": "index.js",
   "scripts": {
